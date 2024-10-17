@@ -1,0 +1,77 @@
+body{
+    background-color: black;
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.sol{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 30px white;
+    position:absolute;
+    top:150px ;
+    left: 150px;
+}
+
+.globo.tierra{
+    background-color: aqua;
+    height: 30px;
+    width: 30px;
+    top: 28px;
+    right: 28px;
+    
+}
+
+.globo.luna{
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    top: 8px;
+    right: 2px;
+}
+.globo{
+    position: absolute;
+    border-radius: 50%;
+}
+
+.orbita.tierra{
+    position: relative;
+    animation: orbita 36.5s linear infinite;
+    height: 300px;
+    width: 300px;
+    left: 50px;
+    top: 50px;
+}
+
+.orbita.luna{
+    animation: orbita 2.5s linear infinite;
+    height: 80px;
+    width: 80px;
+    left: -25px;
+    top: -25px;
+}
+
+.orbita{
+    position: relative;
+    border: solid;
+    border-color: white transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 1px 1px 0 0;
+    box-sizing: border-box;
+    transform: rotate(0deg);
+    transform-origin: center;
+}
+
+@keyframes orbita{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
