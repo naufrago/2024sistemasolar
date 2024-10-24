@@ -1,0 +1,174 @@
+body {
+    background-color: black;
+}
+
+.container {
+    height: 600px;
+    width: 600px;
+    position: relative;
+    margin: auto;
+    top: 100px;
+    perspective: 800px; /* Efecto 3D */
+}
+
+.sol {
+    height: 120px;
+    width: 120px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 60px yellow, 0 0 120px yellow; /* Efecto de resplandor */
+    position: absolute;
+    top: 240px;
+    left: 240px;
+    transform: translateZ(20px); /* Profundidad */
+}
+
+.globo {
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(10px); /* Profundidad */
+}
+
+.orbita {
+    position: absolute;
+    border: solid 1px rgba(255, 255, 255, 0.3); /* Líneas de órbita semi-transparentes */
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: orbita 60s linear infinite;
+    opacity: 0.5; /* Opacidad para desvanecer */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efecto de estela */
+}
+
+.orbita.mercurio {
+    height: 140px;
+    width: 140px;
+    left: 230px;
+    top: 230px;
+    animation-duration: 17s; /* Velocidad realista */
+}
+
+.orbita.venus {
+    height: 180px;
+    width: 180px;
+    left: 210px;
+    top: 210px;
+    animation-duration: 27s; /* Velocidad realista */
+}
+
+.orbita.tierra {
+    height: 220px;
+    width: 220px;
+    left: 190px;
+    top: 190px;
+    animation-duration: 38s; /* Velocidad realista */
+}
+
+.orbita.luna {
+    height: 50px;
+    width: 50px;
+    top: -10px;
+    left: -10px;
+    animation-duration: 2.5s; /* Velocidad rápida para la luna */
+}
+
+.orbita.marte {
+    height: 260px;
+    width: 260px;
+    left: 170px;
+    top: 170px;
+    animation-duration: 57s; /* Velocidad realista */
+}
+
+.orbita.jupiter {
+    height: 320px;
+    width: 320px;
+    left: 140px;
+    top: 140px;
+    animation-duration: 94s; /* Velocidad realista */
+}
+
+.orbita.saturno {
+    height: 380px;
+    width: 380px;
+    left: 110px;
+    top: 110px;
+    animation-duration: 130s; /* Velocidad realista */
+}
+
+.orbita.urano {
+    height: 440px;
+    width: 440px;
+    left: 80px;
+    top: 80px;
+    animation-duration: 170s; /* Velocidad realista */
+}
+
+.orbita.neptuno {
+    height: 500px;
+    width: 500px;
+    left: 50px;
+    top: 50px;
+    animation-duration: 200s; /* Velocidad realista */
+}
+
+.globo.mercurio {
+    width: 15px;
+    height: 15px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg');
+}
+
+.globo.venus {
+    width: 25px;
+    height: 25px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg');
+}
+
+.globo.tierra {
+    width: 30px;
+    height: 30px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Blue_Marble_%28remastered%29.jpg');
+}
+
+.globo.luna {
+    width: 10px;
+    height: 10px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg');
+}
+
+.globo.marte {
+    width: 20px;
+    height: 20px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg');
+}
+
+.globo.jupiter {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg');
+}
+
+.globo.saturno {
+    width: 45px;
+    height: 45px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg');
+}
+
+.globo.urano {
+    width: 35px;
+    height: 35px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg');
+}
+
+.globo.neptuno {
+    width: 30px;
+    height: 30px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg');
+}
+
+@keyframes orbita {
+    to {
+        transform: rotate(360deg);
+    }
+}
