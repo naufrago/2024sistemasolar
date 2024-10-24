@@ -1,0 +1,123 @@
+/* Elimina los márgenes predeterminados del body y configura el fondo negro */
+body {
+    background-color: black;
+    margin: 0; /* Evita cualquier margen alrededor del body */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Establece el body para ocupar toda la altura de la pantalla */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga de la pantalla */
+}
+
+/* Define el contenedor que contiene el Sol y las órbitas */
+.container {
+    position: relative; /* Permite posicionar elementos hijos dentro del contenedor */
+    width: 600px;
+    height: 600px;
+}
+
+/* Estilo del Sol */
+.sol {
+    width: 100px; /* Ancho del Sol */
+    height: 100px; /* Alto del Sol */
+    background-color: yellow; /* Color de fondo amarillo */
+    border-radius: 50%; /* Hace que el Sol sea un círculo */
+    position: absolute; /* Posiciona el Sol en el contenedor */
+    top: 60%; /* Coloca el Sol en el centro vertical del contenedor */
+    left: 66%; /* Coloca el Sol en el centro horizontal del contenedor */
+    transform: translate(-50%, -50%); /* Ajusta la posición exacta del Sol para centrarlo completamente */
+    box-shadow: 0 0 30px white; /* Añade un resplandor alrededor del Sol */
+}
+
+/* Clase general para definir las órbitas */
+.orbita {
+    position: absolute; /* Hace que las órbitas estén posicionadas dentro del contenedor */
+    top: 50%; /* Centra la órbita verticalmente dentro del contenedor */
+    left: 50%; /* Centra la órbita horizontalmente dentro del contenedor */
+    border: 1px solid white; /* Dibuja una línea que representa la órbita del planeta */
+    border-radius: 50%; /* Hace que la órbita sea circular */
+    transform-origin: center; /* Establece el punto de referencia para rotar alrededor del centro */
+    animation: orbitar 20s linear infinite; /* Aplica una animación para que la órbita gire de forma continua */
+}
+
+/* Definición de la animación 'orbitar' */
+@keyframes orbitar {
+    100% {
+        transform: rotate(360deg); /* Hace que la órbita gire en 360 grados */
+    }
+}
+
+/* Clase general para los planetas (globo es cualquier cuerpo esférico en el sistema solar) */
+.globo {
+    position: absolute; /* Posiciona el planeta dentro de la órbita */
+    width: 30px; /* Ancho del planeta */
+    height: 30px; /* Alto del planeta */
+    border-radius: 50%; /* Hace que el planeta sea un círculo */
+    object-fit: cover; /* Asegura que las imágenes de los planetas se ajusten sin distorsionarse */
+}
+
+/* Órbita de Mercurio */
+.orbita.mercurio {
+    width: 150px; /* Diámetro de la órbita */
+    height: 150px;
+    animation-duration: 7s; /* Velocidad de rotación de la órbita (más rápida que las demás) */
+}
+
+/* Órbita de Venus */
+.orbita.venus {
+    width: 200px; /* Diámetro de la órbita de Venus */
+    height: 200px;
+    animation-duration: 10s; /* Velocidad de rotación */
+}
+
+/* Órbita de la Tierra */
+.orbita.tierra {
+    width: 250px; /* Diámetro de la órbita de la Tierra */
+    height: 250px;
+    animation-duration: 15s; /* Tiempo que tarda la Tierra en completar una vuelta */
+}
+
+/* Órbita de Marte */
+.orbita.marte {
+    width: 300px;
+    height: 300px;
+    animation-duration: 20s; /* Marte tarda más tiempo en girar alrededor del Sol */
+}
+
+/* Órbita de Júpiter */
+.orbita.jupiter {
+    width: 350px;
+    height: 350px;
+    animation-duration: 25s; /* Júpiter es más lento en su órbita */
+}
+
+/* Órbita de Saturno */
+.orbita.saturno {
+    width: 400px;
+    height: 400px;
+    animation-duration: 30s; /* Saturno se mueve aún más lento */
+}
+
+/* Órbita de Urano */
+.orbita.urano {
+    width: 450px;
+    height: 450px;
+    animation-duration: 35s; /* Urano se mueve más lentamente debido a su mayor distancia */
+}
+
+/* Órbita de Neptuno */
+.orbita.neptuno {
+    width: 500px;
+    height: 500px;
+    animation-duration: 40s; /* Neptuno tarda mucho más tiempo en dar una vuelta completa */
+}
+
+/* Posiciona los planetas al inicio de sus respectivas órbitas */
+.orbita img {
+    position: absolute;
+    top: 0; /* Coloca el planeta en el borde superior de su órbita */
+    left: 50%; /* Centra horizontalmente el planeta en su órbita */
+    transform: translateX(-50%); /* Ajusta la posición para que quede centrado exactamente */
+}
+
+
