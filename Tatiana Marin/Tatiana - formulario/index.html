@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Inputs en HTML y Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Formulario con Inputs HTML Nativos</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="text" class="form-label">Texto</label>
+                    <input type="text" class="form-control" id="text">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tel" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="tel">
+                </div>
+
+                <div class="mb-3">
+                    <label for="url" class="form-label">URL</label>
+                    <input type="url" class="form-control" id="url">
+                </div>
+
+                <div class="mb-3">
+                    <label for="number" class="form-label">Número</label>
+                    <input type="number" class="form-control" id="number">
+                </div>
+
+                <div class="mb-3">
+                    <label for="range" class="form-label">Rango</label>
+                    <input type="range" class="form-range" id="range">
+                </div>
+
+                
+                <div class="mb-3">
+                    <label for="radio1" class="form-label">Opciones</label>
+                    <div>
+                        <input type="radio" id="radio1" name="opcion" value="1"> Opción 1
+                        <input type="radio" id="radio2" name="opcion" value="2"> Opción 2
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="checkbox" class="form-label">Casilla de Verificación</label>
+                    <div>
+                        <input type="checkbox" id="checkbox1"> Opción 1
+                        <input type="checkbox" id="checkbox2"> Opción 2
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="date" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+
+                <div class="mb-3">
+                    <label for="time" class="form-label">Hora</label>
+                    <input type="time" class="form-control" id="time">
+                </div>
+
+                <div class="mb-3">
+                    <label for="file" class="form-label">Archivo</label>
+                    <input type="file" class="form-control" id="file">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Reiniciar</button>
+            </form>
+        </div>
+
+
+        <div class="col-md-6">
+            <h3>Formulario con Inputs Personalizados con Bootstrap</h3>
+            <form>
+
+                <div class="mb-3">
+                    <label for="text-bs" class="form-label">Texto</label>
+                    <input type="text" class="form-control" id="text-bs" placeholder="Ingresa texto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password-bs" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password-bs" placeholder="Contraseña">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email-bs" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email-bs" placeholder="correo@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tel-bs" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="tel-bs" placeholder="Número telefónico">
+                </div>
+
+                <div class="mb-3">
+                    <label for="url-bs" class="form-label">URL</label>
+                    <input type="url" class="form-control" id="url-bs" placeholder="https://ejemplo.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="number-bs" class="form-label">Número</label>
+                    <input type="number" class="form-control" id="number-bs" placeholder="Ingrese un número">
+                </div>
+
+                <div class="mb-3">
+                    <label for="range-bs" class="form-label">Rango</label>
+                    <input type="range" class="form-range" id="range-bs">
+                </div>
+
+                <div class="mb-3">
+                    <label for="radio-bs" class="form-label">Opciones</label>
+                    <div>
+                        <input type="radio" id="radio-bs1" name="opcion-bs" value="1" class="form-check-input">
+                        <label for="radio-bs1" class="form-check-label">Opción 1</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="radio-bs2" name="opcion-bs" value="2" class="form-check-input">
+                        <label for="radio-bs2" class="form-check-label">Opción 2</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="checkbox-bs" class="form-label">Casilla de Verificación</label>
+                    <div>
+                        <input type="checkbox" id="checkbox-bs1" class="form-check-input">
+                        <label for="checkbox-bs1" class="form-check-label">Opción 1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox-bs2" class="form-check-input">
+                        <label for="checkbox-bs2" class="form-check-label">Opción 2</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="date-bs" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="date-bs">
+                </div>
+
+                <div class="mb-3">
+                    <label for="time-bs" class="form-label">Hora</label>
+                    <input type="time" class="form-control" id="time-bs">
+                </div>
+
+                <div class="mb-3">
+                    <label for="file-bs" class="form-label">Archivo</label>
+                    <input type="file" class="form-control" id="file-bs">
+                </div>
+
+                <button type="submit" class="btn btn-success">Enviar</button>
+                <button type="reset" class="btn btn-warning">Reiniciar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+script>
+
+</body>
+</html>
